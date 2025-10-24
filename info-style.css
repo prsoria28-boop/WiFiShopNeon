@@ -1,120 +1,149 @@
-/* RESETEO */
+/* RESETEO GENERAL */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* FONDO Y TEXTO BASE */
+/* CUERPO GENERAL */
 body {
   font-family: 'Poppins', sans-serif;
-  background: radial-gradient(circle at top, #101820, #050505);
   color: #fff;
+  background: url('fondo-dia.png') no-repeat center center fixed;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* CAPA DE SUAVIZADO */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
 }
 
 /* ENCABEZADO */
 .header {
   text-align: center;
-  padding: 25px 0;
-  position: relative;
-  width: 100%;
-}
-
-.logo-container {
-  position: absolute;
-  left: 20px;
-  top: 20px;
+  z-index: 1;
+  margin-top: 40px;
 }
 
 .logo {
-  width: 85px;
-  height: 85px;
-  border-radius: 50%;
+  width: 130px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00ffff99;
   animation: flotar 3s ease-in-out infinite;
-  box-shadow: 0 0 20px #00ffff;
-  object-fit: cover;
 }
 
 @keyframes flotar {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(-8px); }
 }
 
-.titulo {
-  font-size: 2.2em;
+.header h1 {
+  font-size: 2.5em;
   color: #00ffff;
-  text-shadow: 0 0 15px #00ffff;
+  text-shadow: 0 0 12px #00ffff;
+  margin-top: 10px;
 }
 
-/* CONTENEDOR PRINCIPAL */
-.contenedor {
+.slogan {
+  font-size: 1.2em;
+  color: #e0f7ff;
+  text-shadow: 0 0 8px #00ffff;
+  margin-bottom: 25px;
+}
+
+/* CONTENIDO PRINCIPAL */
+.main-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-  padding: 40px 20px;
+  gap: 25px;
+  z-index: 1;
+  padding: 20px;
   max-width: 1200px;
-  width: 100%;
+}
+
+/* COLUMNAS */
+.column {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
 }
 
 /* TARJETAS */
-.tarjeta {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid #00ffff33;
+.card {
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #00ffff55;
   border-radius: 15px;
-  padding: 20px;
+  padding: 25px;
   width: 300px;
-  transition: all 0.4s ease;
-  box-shadow: 0 0 20px #00ffff33;
-}
-
-.tarjeta:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 0 30px #00ffff88;
-}
-
-/* TITULOS DE TARJETAS */
-.tarjeta h2 {
   text-align: center;
+  box-shadow: 0 0 25px #00ffff33;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(5px);
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 30px #00ffffaa;
+  border-color: #00ffffaa;
+}
+
+/* TITULOS TARJETAS */
+.card h2 {
   color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+  font-size: 1.4em;
   margin-bottom: 15px;
-  font-size: 1.5em;
-  text-shadow: 0 0 8px #00ffff;
 }
 
 /* LISTAS */
-.tarjeta ul {
+.card ul {
   list-style: none;
+  text-align: left;
+  padding-left: 15px;
 }
 
-.tarjeta ul li {
+.card ul li {
   margin: 10px 0;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   transition: 0.3s;
 }
 
-.tarjeta ul li:hover {
+.card ul li:hover {
   color: #00ffff;
-  transform: scale(1.05);
-  text-shadow: 0 0 10px #00ffff;
+  transform: translateX(5px);
+  text-shadow: 0 0 8px #00ffff;
 }
 
-/* TABLA DE TARIFAS */
-.tarjeta table {
-  width: 100%;
-  border-collapse: collapse;
+/* TARIFAS */
+.pricing {
+  list-style: none;
+  padding: 0;
   text-align: center;
 }
 
-.tarjeta table td {
-  padding: 8px;
-  border-bottom: 1px solid #00ffff33;
+.pricing li {
+  margin: 10px 0;
+  font-size: 1.1em;
+  transition: 0.3s;
+}
+
+.pricing li:hover {
+  color: #00ffff;
+  transform: scale(1.05);
 }
 
 /* PIE DE PÁGINA */
@@ -122,6 +151,7 @@ body {
   text-align: center;
   padding: 20px;
   font-size: 0.9em;
-  opacity: 0.8;
-  margin-top: auto;
+  opacity: 0.85;
+  margin-top: 20px;
+  z-index: 1;
 }
