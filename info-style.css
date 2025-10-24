@@ -1,0 +1,67 @@
+/* ===============================
+   WiFi Shop - Neon Style
+   =============================== */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:"Poppins",sans-serif;color:#fff;min-height:100vh;display:flex;justify-content:center;align-items:center;}
+
+/* Fondo */
+.background{position:fixed;inset:0;background:url('fondo-dia.png') no-repeat center center/cover;filter:brightness(0.75);z-index:-2;}
+
+/* Contenedor principal */
+.container{max-width:1200px;width:95%;padding:40px;background:rgba(0,0,0,0.3);backdrop-filter:blur(12px);border-radius:20px;text-align:center;box-shadow:0 0 60px rgba(0,255,255,0.6);animation:fadeIn 1s ease both;}
+
+/* Header */
+.header .logo{max-height:250px;width:auto;object-fit:contain;display:block;margin:0 auto 15px auto;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 15px #00f0ff);}
+.header h1{font-size:3.2rem;color:#00ffff;margin-bottom:8px;text-shadow:0 0 20px #00ffff;}
+.tagline{font-size:1.8rem;color:#fff;text-shadow:0 0 10px #00ffff;}
+.tagline span{font-size:1.2rem;color:#a0f0ff;}
+
+/* Descripción */
+.description{margin-top:20px;font-size:1.5rem;line-height:1.9;text-align:center;}
+.description p{margin-bottom:12px;}
+
+/* Grid principal */
+.main-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;margin-top:35px;}
+.column{display:flex;flex-direction:column;align-items:center;}
+.column.left .service,.column.right .service{margin-bottom:25px;}
+.column.center{justify-content:center;}
+
+/* Servicios */
+.service{background:rgba(0,0,0,0.25);border-radius:18px;padding:18px;width:140px;opacity:0;transform:translateY(20px);transition:all 0.5s ease-in-out;box-shadow:0 0 10px #00ffff;}
+.service.visible{opacity:1;transform:translateY(0);}
+.service:hover{transform:translateY(-10px) scale(1.08);box-shadow:0 0 25px #00ffff,0 0 45px #00f0ff;}
+.service img{width:100%;height:auto;object-fit:contain;border-radius:12px;margin-bottom:10px;}
+.service p{font-weight:600;font-size:1.4rem;color:#fff;text-align:center;}
+.service span{font-size:1rem;color:#a0f0ff;}
+
+/* Tarifas */
+.pricing{background:rgba(0,0,0,0.35);border-radius:20px;padding:28px;margin:0 auto;width:100%;max-width:380px;transition:all 0.5s ease;}
+.pricing h2{font-size:2.2rem;color:#00ffff;margin-bottom:18px;text-align:center;text-shadow:0 0 15px #00ffff;}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:15px;}
+.price-card{background:rgba(0,0,0,0.25);border-radius:15px;padding:15px;transition:transform 0.3s, box-shadow 0.3s;opacity:0;transform:translateY(20px);box-shadow:0 0 10px #00ffff;}
+.price-card.visible{opacity:1;transform:translateY(0);}
+.price-card:hover{transform:translateY(-8px) scale(1.05);box-shadow:0 0 25px #00ffff,0 0 40px #0ff;}
+.price-card h3{font-size:1.4rem;margin-bottom:6px;color:#fff;text-align:center;}
+.price-card p{font-size:1.3rem;font-weight:700;color:#00ffff;text-align:center;}
+
+/* Horario */
+.hours{margin:30px auto;background:rgba(0,0,0,0.35);border-radius:16px;padding:20px;width:80%;max-width:500px;opacity:1;transform:translateY(0);}
+.hours h2{font-size:2rem;color:#00ffff;margin-bottom:10px;text-shadow:0 0 15px #00ffff;}
+.hours p{font-size:1.3rem;color:#fff;}
+
+/* Footer */
+footer{margin-top:30px;font-size:1.3rem;color:#fff;}
+footer span{color:#a0f0ff;}
+
+/* Modal */
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);justify-content:center;align-items:center;z-index:2000;}
+.modal-content{background:#000;color:#0ff;padding:26px;border-radius:20px;text-align:center;width:90%;max-width:420px;box-shadow:0 0 25px #00ffff;}
+.modal-button{margin-top:14px;background:#00ffff;color:#000;font-weight:600;border:none;border-radius:10px;padding:12px 25px;cursor:pointer;transition:all 0.3s ease;}
+.modal-button:hover{background:#0ff;border:1px solid #00f0ff;}
+
+/* Animaciones */
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-15px);}}
+@keyframes fadeIn{0%{opacity:0;transform:translateY(20px);}100%{opacity:1;transform:translateY(0);}}
+
+@media(max-width:1024px){.main-grid{grid-template-columns:1fr 1fr;gap:25px;}}
+@media(max-width:768px){.main-grid{grid-template-columns:1fr;gap:20px;}.header h1{font-size:2.8rem;}.tagline{font-size:1.4rem;}.service p{font-size:1.2rem;}.price-card h3{font-size:1.2rem;}.price-card p{font-size:1rem;}.pricing h2{font-size:1.8rem;}.hours h2{font-size:1.5rem;}.hours p{font-size:1.2rem;}}
