@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="WiFi Shop: tu refugio urbano con café, tortas, recargas, WiFi y más. ¡Todo en un solo lugar!">
-<title>WiFi Shop - Neon Style</title>
-<link rel="stylesheet" href="info-style.css">
+<title>WiFi Shop - Neon Edition</title>
+<link rel="stylesheet" href="info-style.css" />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- Fondo -->
 <div class="background"></div>
 
-<!-- Contenedor principal -->
 <main class="container">
 
   <!-- Header -->
@@ -25,41 +23,63 @@
 
   <!-- Descripción -->
   <section class="description">
-    <p><strong>ES:</strong> En nuestra tienda puedes encontrar de todo: aseo personal, tortas, sincronizadas, sopa maruchan, café, licuados, recargas, ¡y por supuesto, internet WiFi! Todo al alcance de tus manos.</p>
-    <p><strong>EN:</strong> In our store you’ll find everything: personal care, sandwiches, sincronizadas, instant noodle soup, coffee, smoothies, mobile top-ups, and of course, WiFi internet! All at your fingertips.</p>
+    <p><strong>ES:</strong> En nuestra tienda puedes encontrar de todo: aseo personal, tortas, sincronizadas, sopa maruchan, café, licuados, recargas, ¡y por supuesto, internet WiFi!</p>
+    <p><strong>EN:</strong> In our store you’ll find everything: personal care, sandwiches, sincronizadas, instant noodles, coffee, smoothies, mobile top-ups, and WiFi internet!</p>
   </section>
 
-  <!-- Grid principal -->
+  <!-- Contenido principal -->
   <section class="main-grid">
 
     <!-- Columna izquierda -->
     <div class="column left">
-      <div class="service"><img src="tortas.png" alt=""><p>🥪 Tortas / Sandwiches</p></div>
-      <div class="service"><img src="tortas.png" alt=""><p>🫓 Sincronizadas / Grilled Sandwiches</p></div>
-      <div class="service"><img src="tortas.png" alt=""><p>🍜 Sopa Maruchan / Instant Noodles</p></div>
-      <div class="service"><img src="cafe.png" alt=""><p>☕ Café / Coffee</p></div>
-      <div class="service"><img src="licuado.png" alt=""><p>🥤 Licuados / Smoothies</p></div>
+      <div class="service">
+        <img src="tortas.png" alt="Tortas">
+        <div class="text">
+          <h3>🥪 Tortas / Sandwiches</h3>
+          <ul>
+            <li>🫓 Sincronizadas / Grilled Sandwiches</li>
+            <li>🍜 Sopa Maruchan / Instant Noodles</li>
+          </ul>
+        </div>
+      </div>
+      <div class="service">
+        <img src="cafe.png" alt="Café">
+        <p>☕ Café / Coffee</p>
+      </div>
+      <div class="service">
+        <img src="licuado.png" alt="Licuado">
+        <p>🥤 Licuados / Smoothies</p>
+      </div>
     </div>
 
-    <!-- Columna central - Tarifas -->
+    <!-- Columna central (Tarifas de Internet) -->
     <div class="column center">
       <section class="pricing visible">
         <h2>💻 Tarifas de Internet</h2>
         <div class="pricing-grid">
-          <div class="price-card visible"><h3>30 minutos</h3><p>$5.00</p></div>
-          <div class="price-card visible"><h3>1 hora</h3><p>$10.00</p></div>
-          <div class="price-card visible"><h3>Día</h3><p>$30.00</p></div>
-          <div class="price-card visible"><h3>Semana</h3><p>$85.00</p></div>
-          <div class="price-card visible"><h3>Mes</h3><p>$190.00</p></div>
+          <div class="price-card"><h3>30 min</h3><p>$5.00</p></div>
+          <div class="price-card"><h3>1 hora</h3><p>$10.00</p></div>
+          <div class="price-card"><h3>Día</h3><p>$30.00</p></div>
+          <div class="price-card"><h3>Semana</h3><p>$85.00</p></div>
+          <div class="price-card"><h3>Mes</h3><p>$190.00</p></div>
         </div>
       </section>
     </div>
 
     <!-- Columna derecha -->
     <div class="column right">
-      <div class="service"><img src="aseo.png" alt=""><p>🧼 Aseo Personal / Personal Care</p></div>
-      <div class="service"><img src="recarga.png" alt=""><p>📲 Recargas / Top-ups</p></div>
-      <div class="service"><img src="internet.png" alt=""><p>🌐 Internet WiFi / WiFi</p></div>
+      <div class="service">
+        <img src="aseo.png" alt="Aseo Personal">
+        <p>🧼 Aseo Personal / Personal Care</p>
+      </div>
+      <div class="service">
+        <img src="recarga.png" alt="Recargas">
+        <p>📲 Recargas / Top-ups</p>
+      </div>
+      <div class="service">
+        <img src="internet.png" alt="Internet WiFi">
+        <p>🌐 Internet WiFi / WiFi</p>
+      </div>
     </div>
 
   </section>
@@ -86,15 +106,11 @@
   </div>
 </div>
 
-<!-- Script -->
 <script>
 const trialWarningTime = 240000;
 const modal = document.getElementById("trialModal");
-function closeModal(){ modal.style.display="none"; }
-setTimeout(()=>{ modal.style.display="flex"; }, trialWarningTime);
-
-// Mostrar servicios y tarifas
-document.querySelectorAll('.service, .price-card').forEach(el => el.classList.add('visible'));
+function closeModal() { modal.style.display = "none"; }
+setTimeout(() => { modal.style.display = "flex"; }, trialWarningTime);
 </script>
 
 </body>
