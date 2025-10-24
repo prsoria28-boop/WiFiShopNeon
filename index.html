@@ -1,69 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Café Internet & Recargas</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WiFi Shop - Tu Refugio Urbano</title>
 
-  <!-- Fuente y estilos -->
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a2e0ad9e55.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+  <div class="overlay"></div>
+
   <header class="header">
-    <div class="logo-container">
-      <img src="logo.png" alt="Logo del negocio" class="logo">
-    </div>
-    <h1 class="titulo">Café Internet & Recargas</h1>
+    <img src="logo.png" alt="Logo WiFi Shop" class="logo" />
+    <h1>WiFi Shop</h1>
+    <p class="slogan">Tu refugio urbano en la terminal · Your urban refuge in the terminal</p>
   </header>
 
-  <main class="contenedor">
-    <!-- Columna izquierda -->
-    <div class="columna">
-      <div class="tarjeta">
+  <main class="main-content">
+    <section class="column">
+      <div class="card">
         <h2><i class="fas fa-utensils"></i> Tortas y Café</h2>
         <ul>
           <li><i class="fas fa-bread-slice"></i> Tortas</li>
           <li><i class="fas fa-hamburger"></i> Sándwiches</li>
-          <li><i class="fas fa-coffee"></i> Café</li>
           <li><i class="fas fa-blender"></i> Licuados</li>
+          <li><i class="fas fa-mug-hot"></i> Café</li>
           <li><i class="fas fa-bacon"></i> Sincronizadas</li>
-          <li><i class="fas fa-mug-hot"></i> Sopa Maruchan</li>
+          <li><i class="fas fa-ice-cream"></i> Sopa Maruchan</li>
         </ul>
       </div>
-    </div>
+    </section>
 
-    <!-- Columna central -->
-    <div class="columna">
-      <div class="tarjeta">
+    <section class="column">
+      <div class="card center-card">
         <h2><i class="fas fa-wifi"></i> Tarifas de Internet</h2>
-        <table>
-          <tr><td>30 min</td><td>$5</td></tr>
-          <tr><td>1 hora</td><td>$10</td></tr>
-          <tr><td>2 horas</td><td>$15</td></tr>
-          <tr><td>3 horas</td><td>$20</td></tr>
-          <tr><td>Ilimitado</td><td>$25</td></tr>
-        </table>
+        <ul class="pricing">
+          <li>30 min — <strong>$5.00</strong></li>
+          <li>1 hora — <strong>$10.00</strong></li>
+          <li>2 horas — <strong>$15.00</strong></li>
+          <li>3 horas — <strong>$20.00</strong></li>
+          <li>Ilimitado — <strong>$25.00</strong></li>
+        </ul>
       </div>
-    </div>
+    </section>
 
-    <!-- Columna derecha -->
-    <div class="columna">
-      <div class="tarjeta">
-        <h2><i class="fas fa-mobile-alt"></i> Recargas y Servicios</h2>
+    <section class="column">
+      <div class="card">
+        <h2><i class="fas fa-bolt"></i> Servicios y Recargas</h2>
         <ul>
-          <li><i class="fas fa-bolt"></i> Recargas: Telcel, Movistar, AT&T, Unefon, Bait</li>
+          <li><i class="fas fa-battery-full"></i> Recargas: Telcel, Movistar, AT&T, Unefon, Bait</li>
           <li><i class="fas fa-wifi"></i> Internet WiFi</li>
           <li><i class="fas fa-pump-soap"></i> Aseo personal</li>
         </ul>
       </div>
-    </div>
+    </section>
   </main>
 
   <footer class="footer">
-    <p>© 2025 Café Internet & Recargas - Todos los derechos reservados.</p>
+    <p>© 2025 WiFi Shop — Todos los derechos reservados.</p>
   </footer>
 </body>
 </html>
