@@ -1,157 +1,159 @@
-/* RESETEO GENERAL */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* CUERPO GENERAL */
+/* === FUENTES Y RESETEO === */
 body {
   font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
   color: #fff;
-  background: url('fondo-dia.png') no-repeat center center fixed;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  position: relative;
+  background: radial-gradient(circle at top, #0a0a0a 30%, #000000 90%);
   overflow-x: hidden;
 }
 
-/* CAPA DE SUAVIZADO */
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 0;
+/* === FONDO === */
+.background {
+  background: url('fondo-dia.jpg') center/cover no-repeat fixed;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.25;
+  filter: blur(2px);
 }
 
-/* ENCABEZADO */
-.header {
-  text-align: center;
-  z-index: 1;
-  margin-top: 40px;
-}
-
-.logo {
-  width: 130px;
-  height: auto;
-  border-radius: 15px;
-  box-shadow: 0 0 20px #00ffff99;
-  animation: flotar 3s ease-in-out infinite;
-}
-
-@keyframes flotar {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-
-.header h1 {
-  font-size: 2.5em;
-  color: #00ffff;
-  text-shadow: 0 0 12px #00ffff;
-  margin-top: 10px;
-}
-
-.slogan {
-  font-size: 1.2em;
-  color: #e0f7ff;
-  text-shadow: 0 0 8px #00ffff;
-  margin-bottom: 25px;
-}
-
-/* CONTENIDO PRINCIPAL */
-.main-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-  z-index: 1;
-  padding: 20px;
+/* === CONTENEDOR PRINCIPAL === */
+.container {
   max-width: 1200px;
-}
-
-/* COLUMNAS */
-.column {
-  flex: 1;
-  min-width: 280px;
-  display: flex;
-  justify-content: center;
-}
-
-/* TARJETAS */
-.card {
-  background: rgba(0, 0, 0, 0.6);
-  border: 2px solid #00ffff55;
-  border-radius: 15px;
-  padding: 25px;
-  width: 300px;
+  margin: auto;
+  padding: 20px;
   text-align: center;
-  box-shadow: 0 0 25px #00ffff33;
-  transition: all 0.4s ease;
-  backdrop-filter: blur(5px);
 }
 
-.card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 0 30px #00ffffaa;
-  border-color: #00ffffaa;
+/* === HEADER === */
+.header {
+  animation: fadeIn 2s ease;
+}
+.logo {
+  width: 100px;
+  height: auto;
+  filter: drop-shadow(0 0 15px cyan);
+}
+.tagline span { color: #8ffeff; }
+
+/* === DESCRIPCIÓN === */
+.description {
+  margin: 20px auto;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 0 20px #00fff2;
 }
 
-/* TITULOS TARJETAS */
-.card h2 {
-  color: #00ffff;
-  text-shadow: 0 0 10px #00ffff;
-  font-size: 1.4em;
-  margin-bottom: 15px;
+/* === GRID === */
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 30px;
 }
 
-/* LISTAS */
-.card ul {
-  list-style: none;
-  text-align: left;
-  padding-left: 15px;
+/* === TARJETAS NEÓN === */
+.neon-card {
+  background: rgba(10, 10, 10, 0.7);
+  border: 2px solid transparent;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 15px;
+}
+.neon-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 30px #00fff2, 0 0 60px #00ffff;
+  border-color: #00ffff;
 }
 
-.card ul li {
-  margin: 10px 0;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: 0.3s;
+/* === SERVICIOS === */
+.service img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px cyan;
 }
-
-.card ul li:hover {
-  color: #00ffff;
-  transform: translateX(5px);
-  text-shadow: 0 0 8px #00ffff;
-}
-
-/* TARIFAS */
-.pricing {
+.service ul {
   list-style: none;
   padding: 0;
-  text-align: center;
+  margin: 8px 0 0 0;
+}
+.service ul li {
+  font-size: 0.95em;
+  padding: 2px 0;
 }
 
-.pricing li {
-  margin: 10px 0;
-  font-size: 1.1em;
+/* === TARIFAS === */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px;
+}
+.price-card {
+  background: rgba(0, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px;
   transition: 0.3s;
+  box-shadow: 0 0 15px #00fff2;
 }
-
-.pricing li:hover {
-  color: #00ffff;
+.price-card:hover {
+  background: rgba(0, 255, 255, 0.25);
   transform: scale(1.05);
 }
 
-/* PIE DE PÁGINA */
-.footer {
+/* === HORARIO === */
+.hours {
+  margin-top: 40px;
+  padding: 15px;
+}
+
+/* === FOOTER === */
+footer {
+  margin-top: 30px;
+  color: #aaa;
+}
+
+/* === MODAL === */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: rgba(20, 20, 20, 0.9);
+  padding: 25px;
+  border-radius: 15px;
   text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
-  opacity: 0.85;
-  margin-top: 20px;
-  z-index: 1;
+  max-width: 400px;
+}
+.modal-button {
+  margin-top: 15px;
+  padding: 8px 20px;
+  background: cyan;
+  border: none;
+  color: #000;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.modal-button:hover {
+  background: #00ffff;
+  box-shadow: 0 0 20px cyan;
+}
+
+/* === ANIMACIONES === */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
 }
