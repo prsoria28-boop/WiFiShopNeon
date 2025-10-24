@@ -1,117 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="WiFi Shop: tu refugio urbano con café, tortas, recargas, WiFi y más. ¡Todo en un solo lugar!">
-<title>WiFi Shop - Neon Edition</title>
-<link rel="stylesheet" href="info-style.css" />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Internet & Recargas</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0ad9e55.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-<div class="background"></div>
-
-<main class="container">
-
-  <!-- Header -->
   <header class="header">
-    <img src="logo.png" alt="Logo WiFi Shop" class="logo">
-    <h1>WiFi Shop</h1>
-    <p class="tagline">Tu refugio urbano en la terminal · <span>Your urban refuge in the terminal</span></p>
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo del negocio" class="logo">
+    </div>
+    <h1 class="titulo">Café Internet & Recargas</h1>
   </header>
 
-  <!-- Descripción -->
-  <section class="description">
-    <p><strong>ES:</strong> En nuestra tienda puedes encontrar de todo: aseo personal, tortas, sincronizadas, sopa maruchan, café, licuados, recargas, ¡y por supuesto, internet WiFi!</p>
-    <p><strong>EN:</strong> In our store you’ll find everything: personal care, sandwiches, sincronizadas, instant noodles, coffee, smoothies, mobile top-ups, and WiFi internet!</p>
-  </section>
-
-  <!-- Contenido principal -->
-  <section class="main-grid">
-
-    <!-- Columna izquierda -->
-    <div class="column left">
-      <div class="service">
-        <img src="tortas.png" alt="Tortas">
-        <div class="text">
-          <h3>🥪 Tortas / Sandwiches</h3>
-          <ul>
-            <li>🫓 Sincronizadas / Grilled Sandwiches</li>
-            <li>🍜 Sopa Maruchan / Instant Noodles</li>
-          </ul>
-        </div>
-      </div>
-      <div class="service">
-        <img src="cafe.png" alt="Café">
-        <p>☕ Café / Coffee</p>
-      </div>
-      <div class="service">
-        <img src="licuado.png" alt="Licuado">
-        <p>🥤 Licuados / Smoothies</p>
+  <main class="contenedor">
+    <!-- COLUMNA IZQUIERDA -->
+    <div class="columna">
+      <div class="tarjeta">
+        <h2><i class="fas fa-utensils"></i> Tortas y Café</h2>
+        <ul>
+          <li><i class="fas fa-bread-slice"></i> Tortas</li>
+          <li><i class="fas fa-hamburger"></i> Sándwiches</li>
+          <li><i class="fas fa-coffee"></i> Café</li>
+          <li><i class="fas fa-blender"></i> Licuados</li>
+          <li><i class="fas fa-bacon"></i> Sincronizadas</li>
+          <li><i class="fas fa-mug-hot"></i> Sopa Maruchan</li>
+        </ul>
       </div>
     </div>
 
-    <!-- Columna central (Tarifas de Internet) -->
-    <div class="column center">
-      <section class="pricing visible">
-        <h2>💻 Tarifas de Internet</h2>
-        <div class="pricing-grid">
-          <div class="price-card"><h3>30 min</h3><p>$5.00</p></div>
-          <div class="price-card"><h3>1 hora</h3><p>$10.00</p></div>
-          <div class="price-card"><h3>Día</h3><p>$30.00</p></div>
-          <div class="price-card"><h3>Semana</h3><p>$85.00</p></div>
-          <div class="price-card"><h3>Mes</h3><p>$190.00</p></div>
-        </div>
-      </section>
-    </div>
-
-    <!-- Columna derecha -->
-    <div class="column right">
-      <div class="service">
-        <img src="aseo.png" alt="Aseo Personal">
-        <p>🧼 Aseo Personal / Personal Care</p>
-      </div>
-      <div class="service">
-        <img src="recarga.png" alt="Recargas">
-        <p>📲 Recargas / Top-ups</p>
-      </div>
-      <div class="service">
-        <img src="internet.png" alt="Internet WiFi">
-        <p>🌐 Internet WiFi / WiFi</p>
+    <!-- COLUMNA CENTRAL -->
+    <div class="columna">
+      <div class="tarjeta">
+        <h2><i class="fas fa-wifi"></i> Tarifas de Internet</h2>
+        <table>
+          <tr><td>30 min</td><td>$5</td></tr>
+          <tr><td>1 hora</td><td>$10</td></tr>
+          <tr><td>2 horas</td><td>$15</td></tr>
+          <tr><td>3 horas</td><td>$20</td></tr>
+          <tr><td>Tiempo ilimitado</td><td>$25</td></tr>
+        </table>
       </div>
     </div>
 
-  </section>
+    <!-- COLUMNA DERECHA -->
+    <div class="columna">
+      <div class="tarjeta">
+        <h2><i class="fas fa-mobile-alt"></i> Recargas y Servicios</h2>
+        <ul>
+          <li><i class="fas fa-bolt"></i> Recargas: Telcel, Movistar, AT&T, Unefon, Bait</li>
+          <li><i class="fas fa-wifi"></i> Internet WiFi</li>
+          <li><i class="fas fa-pump-soap"></i> Aseo personal</li>
+        </ul>
+      </div>
+    </div>
+  </main>
 
-  <!-- Horario -->
-  <section class="hours visible">
-    <h2>🕘 Horario</h2>
-    <p>9:00 AM – 6:00 PM</p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>Gracias por apoyar a <strong>WiFi Shop</strong><br><span>Thank you for supporting WiFi Shop</span></p>
+  <footer class="footer">
+    <p>© 2025 Café Internet & Recargas - Todos los derechos reservados.</p>
   </footer>
-
-</main>
-
-<!-- Modal -->
-<div class="modal" id="trialModal">
-  <div class="modal-content">
-    <h3>⏳ Tiempo gratuito por terminar</h3>
-    <p>Visítanos en <strong>WiFi Shop</strong> para adquirir acceso completo.<br>Your free time is almost up — visit WiFi Shop to purchase full access.</p>
-    <button class="modal-button" onclick="closeModal()">Entendido / OK</button>
-  </div>
-</div>
-
-<script>
-const trialWarningTime = 240000;
-const modal = document.getElementById("trialModal");
-function closeModal() { modal.style.display = "none"; }
-setTimeout(() => { modal.style.display = "flex"; }, trialWarningTime);
-</script>
-
 </body>
 </html>
